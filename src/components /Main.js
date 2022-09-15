@@ -24,7 +24,27 @@ import { ImSwitch } from 'react-icons/im'
 
 const Main = () => {
 
+    const [ schoolOfHardKnocks, showSOHN ] = useState(
+        <div className=' col school-knocks'>
+                                
+        </div>
+    )
+
+
+    const [brainTrain, showBrainTrain] = useState(
+        <div className='col brain-train'>
+
+        </div>
+    )
+
+    const [pugilistExpress, showPugilistExpress ] = useState(
+        <div className='col pugilist-express'>
+                                
+        </div>
+    );
+
     const [show, showNav] = useState(false);
+
 
     const showNavBar = () => {
         if(window.scrollY > 100){
@@ -89,15 +109,15 @@ const Main = () => {
                     </div>
             </header>
 
-            <section className='about-me col-wh'>
+            <section className='about-me bg-org col-wh'>
                 <div className='container'>
-                    <div className='row d-flex'>
+                    <div className='row d-flex bg-wh'>
                         <div className='col-md-6 col-lg-5 d-flex img-container'>
                             <div  className='img d-flex align-items-center'>    
                                 
                             </div>
                         </div>
-                        <div className='col-md-6 col-lg-7 pl-lg-5 py-5' id="About" >
+                        <div className='col-md-6 col-lg-7 pl-lg-5 py-5 ' id="About" >
                             <div className='row justify-content-start pb-3'>
                                 <div className='about-me-div text-center'>
                                     <h2 className='fw-7-ls-2'>About Me</h2>
@@ -108,16 +128,18 @@ const Main = () => {
                                 </div>
                                 <div className='row pt-4'>
                                     <div className='col about-me-square text-center'>
-                                        <div className='boxing-icon text-center mt-1'><GiBoxingGloveSurprise /></div>
-                                        <h4 className='fw-7-ls-2'>Creative Thinking Time</h4>
-                                        <p>I want square block her you over on to view the information </p>
-                                        <p> For now it can be more lyrics</p>
+                                        <div className='boxing-icon text-center mt-1'><GiBoxingGloveSurprise className='mb-4' /></div>
+                                        <h4 className='fw-7-ls-2'>At Work</h4>
+                                        <p> I am someone who is focused and tunnel vision to toward the task at hand, i am driven to complete
+                                            my tasks to the best of my ability and make sure to not leave any stone untured
+                                        </p>
+                                        
                                     </div>
                                     <div className='col about-me-square text-center'>
-                                        <div className='boxing-icon text-center mt-1'><ImSwitch className='mb-2' /></div>
+                                        <div className='boxing-icon text-center mt-1'><ImSwitch className='mb-4' /></div>
                                         <h4 className='fw-7-ls-2'>Off Switch</h4>
-                                        <p>And the exact same here</p>
-                                        <p> And more lyrics here </p>
+                                        <p>In my free time i love to skate and box, boxing has been a big part of my life
+                                            and shaped me into who i am today. I Also love a good boogie where possible</p>
                                     </div>
                                 </div>
                             </div>
@@ -133,31 +155,25 @@ const Main = () => {
                         
                         <div className='row '>
                             
-                            <div className='col pugilist-express'>
-                                
-                            </div>
+                            {pugilistExpress}
                             
-                            <div className='col brain-train'>
-                                
-                            </div>
+                            
+                            {brainTrain}
                             
                             <div className='row g-0 '>
-                                <div className=' col school-knocks'>
+                            
+                            { schoolOfHardKnocks }
+
+                            { brainTrain }
                                 
-                                </div>
-                                <div className='col brain-train'>
-                    
-                                </div>
-                                
-                                <div className='col school-knocks'>
-                                   
-                                </div>
+                            { schoolOfHardKnocks }
+                            
                             </div>
                         </div>
                     </div>
             </section>
 
-            <section className='tech-stack'>
+            <section className='tech-stack '>
                 <div className='container pt-4'>
                     <div className="row justify-content-around text-center ">
                         <div className='tech-stack-container  '>
