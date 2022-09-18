@@ -4,13 +4,20 @@ import $ from 'jquery'
 import { useState, useEffect } from 'react';
 import '../App.css'
 import headshot from '../images/headshot-removebg-preview.png'
-import jsLogo from '../images/js.icon.png'
-import jqueryIcon from '../images/jquery-icon .png'
+import jsLogo from '../images/js-icon.png'
+import jqueryIcon from '../images/jquery-icon.png'
+import nodeIcon from '../images/node-icon.png'
 import railsIcon from '../images/rails-icon.webp'
 import rubyIcon from '../images/ruby-icon.png'
-import reactIcon from '../images/react.icon.jpeg'
+import reactIcon from '../images/react-icon.png'
 import aframeIcon from '../images/aframe-icon.png'
-import firebaseIcon from '../images/firebase-icon .png'
+import firebaseIcon from '../images/firebase-icon.png'
+import bootstrapIcon from '../images/bootstrap-icon.png'
+import VueIcon from '../images/vue-icon.png'
+
+import sohnBg from '../images/schoolofhardknocks.png'
+import bTrainBg from '../images/brain-train.png'
+import pugExpBg from '../images/pugilist-express.png'
 
 import { BsFillPhoneVibrateFill } from 'react-icons/bs'
 import { AiTwotoneMail } from 'react-icons/ai'
@@ -24,22 +31,75 @@ import { ImSwitch } from 'react-icons/im'
 
 const Main = () => {
 
-    const [ schoolOfHardKnocks, showSOHN ] = useState(
-        <div className=' col school-knocks'>
-                                
-        </div>
-    )
+    const [ isHover, setIsHovering ] = useState(false);
+   
+    const showProjectInfo = (e) => {
+        setIsHovering(true)
 
+    }
+
+
+    const hideSOHNInfo = async (e) => {
+        e.target.style.backgroundImage = `url(${ sohnBg })`;
+        e.target.style.backgroundSize = 'cover';
+        e.target.style.width = '100%';
+        e.target.style.height = '300px';
+        e.target.backgroundRepeat = 'no-repeat';
+        setIsHovering(false)
+    }
+    
+    
+    const [ schoolOfHardKnocks, showSOHN ] = useState(
+        <div
+        className={'col school-knocks'}
+        onMouseEnter={showProjectInfo} 
+        onMouseLeave={hideSOHNInfo}
+        > 
+        {isHover && 
+        <div><h1>HELLO WORLd</h1></div>
+        }
+            
+        </div>
+    );
+
+    const showBtInfo = (e) => {
+        e.target.style.background = `linear-gradient(38.53deg, rgba(255, 158, 27, .8) 0%, #f74f41ff 100%)`
+    }
+    const hideBtInfo = (e) => {
+        e.target.style.background = `url(${ bTrainBg })`;
+        e.target.style.backgroundSize = 'cover';
+        e.target.style.backgroundRepeat = 'no-repeat';
+        e.target.style.height = '300px';
+    }
 
     const [brainTrain, showBrainTrain] = useState(
-        <div className='col brain-train'>
-
+        <div 
+        className='col brain-train'
+        onMouseOver={showBtInfo}
+        onMouseOut={hideBtInfo}
+        >
+            {/* The project is set at the background of the div */}
         </div>
     )
 
+    const showPxInfo = (e) => {
+        e.target.style.background =  `linear-gradient(38.53deg, rgba(255, 158, 27, .8) 0%, #f74f41ff 100%)`
+    }
+
+    const hidePxInfo = (e) => {
+        e.target.style.background = `url(${ pugExpBg })`;
+        e.target.style.backgroundSize = 'cover';
+        e.target.style.height = `300px`;
+        e.target.style.backgroundRepeat = 'no-repeat';
+    }
+
     const [pugilistExpress, showPugilistExpress ] = useState(
-        <div className='col pugilist-express'>
-                                
+        <div 
+        className='col pugilist-express'
+        onMouseEnter={showPxInfo}
+        onMouseLeave={hidePxInfo}
+            >
+            {/* The project is set at the background of the div */}
         </div>
     );
 
@@ -66,20 +126,18 @@ const Main = () => {
 
             <div className='center-container'>
 
-            <nav className={`nav navbar navbar-expand-lg fixed-top navbar-shrink`} id={`${show && 'Nav'}`}> 
-            <div className='text-center w-100 ' >
-                    
+                <nav className={`nav navbar navbar-expand-lg fixed-top navbar-shrink`} id={`${show && 'Nav'}`}> 
+                <div className='text-center w-100' ></div>
+            
+            <div className='collapse navbar-collapse '>  
+                <div className="collapse navbar-collapse" >
+                    <div className="navbar-nav text-end nav-anchor-div">
+                        <a className="nav-item nav-link mx-5" href='#PageHome'>Home</a>
+                        <a className="nav-item nav-link mx-5" href="#About">About</a>
+                        <a className="nav-item nav-link mx-5" href="#">Projects</a>
+                        <a className="nav-item nav-link mx-5" href="#">Contact</a>
+                    </div></div>
                 </div>
-
-                <div className='collapse navbar-collapse '>  
-                    <div className="collapse navbar-collapse" >
-                        <div className="navbar-nav text-end nav-anchor-div">
-                            <a className="nav-item nav-link active mx-5" href='#PageHome'>Home</a>
-                            <a className="nav-item nav-link mx-5" href="#About">About</a>
-                            <a className="nav-item nav-link mx-5" href="#">Projects</a>
-                            <a className="nav-item nav-link mx-5" href="#">Contact</a>
-                        </div></div>
-                    </div>
             </nav>
 
             <header className='header' id="PageHome">
@@ -126,7 +184,7 @@ const Main = () => {
                                         positive mindset and love learnin from those around me.    
                                     </div>
                                 </div>
-                                <div className='row pt-4'>
+                                <div className='row pt-1'>
                                     <div className='col about-me-square text-center'>
                                         <div className='boxing-icon text-center mt-1'><GiBoxingGloveSurprise className='mb-4' /></div>
                                         <h4 className='fw-7-ls-2'>At Work</h4>
@@ -150,14 +208,13 @@ const Main = () => {
                 <section className='projects '>
                 <div className='projects-inner-container container h-100 mt-20'>
                     {/* I might want the container div to be set on the inner one */}
-                    <div className='text-center proj-heading '> Projects</div>
+                    <div className='text-center proj-heading ' > Projects</div>
                         <div className='text-center mb-5' >While at General Assembly</div>
                         
                         <div className='row '>
                             
                             {pugilistExpress}
-                            
-                            
+
                             {brainTrain}
                             
                             <div className='row g-0 '>
@@ -167,7 +224,7 @@ const Main = () => {
                             { brainTrain }
                                 
                             { schoolOfHardKnocks }
-                            
+
                             </div>
                         </div>
                     </div>
@@ -177,15 +234,21 @@ const Main = () => {
                 <div className='container pt-4'>
                     <div className="row justify-content-around text-center ">
                         <div className='tech-stack-container  '>
-                            <h1 className='skills'>Skills</h1>
-                            To be continued   
+                            <h1 className='skills'> Skills </h1>
+                            <span> skills.sort(( a,b ) => b - a ) </span>
                         </div>
-                        <div className='row stack-icons m-5' >
+                        <div className='row stack-icons m-5 container' >
                             <div className='col'>
-                                <img src={jsLogo} alt="Javascript"/>
+                                <img src={jsLogo} alt="Javascript" />
                             </div>
-                            <div className='col icon'>
+                            <div className='col'>
+                                <img src={bootstrapIcon} alt="Bootstrap" />
+                            </div>
+                            <div className='col'>
                                 <img src={reactIcon} alt="React" />
+                            </div>
+                            <div className='col'>
+                                <img src={jqueryIcon} alt="Jquery" />
                             </div>
                             <div className='col'>
                                 <img src={aframeIcon} alt="Aframe" />
@@ -193,8 +256,8 @@ const Main = () => {
                             <div className='col'>
                                 <img src={firebaseIcon} alt="Firebase" />
                             </div>
-                            <div className='col icon'>
-                                <img src={jqueryIcon} alt="Jquery" />
+                            <div className='col '>
+                                <img src={nodeIcon} alt="Jquery" />
                             </div>
                             <div className='col'>
                                 <img src={rubyIcon} alt="Ruby" />
@@ -202,8 +265,12 @@ const Main = () => {
                             <div className='col '>
                                 <img src={railsIcon} alt="Rails" />
                             </div>
+                            <div className='col'>
+                                <img src={VueIcon} alt="Vue" />
+                            </div>
+                            
                         </div>
-                        <span>And always learning more</span>
+                        <span className='skills'>And always learning more</span>
                         <span className='d-block'>so to be continiued...</span>
                     </div>
                 </div>
@@ -211,24 +278,26 @@ const Main = () => {
             
 
             <footer className='footer text-center'>
-                <div className='f-4em-fw-500'>Contact Me</div>
-                <div className='container mt-3' >
+                <div className='f-2em-fw-500'>Contact Me</div>
+                <div className='container' >
                     <div className='row'>
-                        <div className='col mt-0'>
-                            <ul className='row '>
-                                <li className='contact-info'><a href="https://github.com/tsharliz-Joma" target="_blank"><VscGithub/></a></li>
+                        <div className='row mt-0'>
+                            <ul className='col '>
+                                <li className='contact-info'><a href="https://github.com/tsharliz-Joma" target={"_blank"}><VscGithub/></a></li>
                             </ul>
-                            <ul className="row">
-                                <li className='contact-info'><a href='https://www.linkedin.com/in/charlesjoma/'><BsLinkedin /></a></li>
+                            <ul className="col">
+                                <li className='contact-info'><a href='https://www.linkedin.com/in/charlesjoma/' target={'_blank'}><BsLinkedin /></a></li>
+                            </ul>
+                            <ul className="col contact-info">
+                                <li ><BsFillPhoneVibrateFill color='rgb(255 158 27)' /><br /> +61 458 495 327 </li>
+                            </ul>
+                            <ul className='contact-info col'>
+                                <li><AiTwotoneMail color='rgb(255 158 27)' /> charlesjoma@yahoo.com </li>
                             </ul>
                         </div>
                         <div className='col mt-0'>
-                            <ul className="row">
-                                <li className='contact-info'><BsFillPhoneVibrateFill color='rgb(255 158 27)' /> : +61458495327</li>
-                            </ul>
-                            <ul className='contact-info'>
-                                <li><AiTwotoneMail color='rgb(255 158 27)' /> : charlesjoma@yahoo.com</li>
-                            </ul>
+                            
+                            
                         </div>
                     </div>
 
