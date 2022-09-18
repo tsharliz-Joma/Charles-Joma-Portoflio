@@ -33,73 +33,76 @@ const Main = () => {
 
     const [ isHover, setIsHovering ] = useState(false);
    
-    const showProjectInfo = (e) => {
+    const showProjectInfo = () => {
         setIsHovering(true)
-
     }
 
-
-    const hideSOHNInfo = async (e) => {
-        e.target.style.backgroundImage = `url(${ sohnBg })`;
-        e.target.style.backgroundSize = 'cover';
-        e.target.style.width = '100%';
-        e.target.style.height = '300px';
-        e.target.backgroundRepeat = 'no-repeat';
+    useEffect(() => {
+        showProjectInfo()
+    }, [])
+    const hideSOHNInfo =  () => {
         setIsHovering(false)
     }
-    
-    
+
+
     const [ schoolOfHardKnocks, showSOHN ] = useState(
         <div
-        className={'col school-knocks'}
-        onMouseEnter={showProjectInfo} 
-        onMouseLeave={hideSOHNInfo}
-        > 
-        {isHover && 
-        <div><h1>HELLO WORLd</h1></div>
-        }
-            
+        onMouseOver={showProjectInfo}
+         className={`col school-knocks `} > 
+            <img src={sohnBg} width="100%" height="100%" />
+            <div 
+            className={`sohnOverlay text-center ${isHover ? "" : "hidden"}`}>
+                <h2>School of hard knocks</h2>
+                <ul className={ 'text-center'} >
+                    <li>Live Site</li>
+                    <li>Github Repo</li>
+                </ul>
+            </div>
         </div>
     );
 
+    //==============================================================
+
     const showBtInfo = (e) => {
-        e.target.style.background = `linear-gradient(38.53deg, rgba(255, 158, 27, .8) 0%, #f74f41ff 100%)`
+       
     }
     const hideBtInfo = (e) => {
-        e.target.style.background = `url(${ bTrainBg })`;
-        e.target.style.backgroundSize = 'cover';
-        e.target.style.backgroundRepeat = 'no-repeat';
-        e.target.style.height = '300px';
+        
     }
 
     const [brainTrain, showBrainTrain] = useState(
         <div 
-        className='col brain-train'
-        onMouseOver={showBtInfo}
-        onMouseOut={hideBtInfo}
-        >
-            {/* The project is set at the background of the div */}
+        className={'col brain-train'} >
+            <img src={bTrainBg} width="100%" height="100%" />
+            <div  className={'btOverlay text-center'}>
+                <h2>Brain Train</h2>
+                <ul className='text-center'>
+                    <li><a>Live Site</a></li>
+                    <li><a>Github Repo</a></li>
+                </ul>
+            </div>
         </div>
     )
 
     const showPxInfo = (e) => {
-        e.target.style.background =  `linear-gradient(38.53deg, rgba(255, 158, 27, .8) 0%, #f74f41ff 100%)`
+        
     }
 
     const hidePxInfo = (e) => {
-        e.target.style.background = `url(${ pugExpBg })`;
-        e.target.style.backgroundSize = 'cover';
-        e.target.style.height = `300px`;
-        e.target.style.backgroundRepeat = 'no-repeat';
+      
     }
 
     const [pugilistExpress, showPugilistExpress ] = useState(
         <div 
-        className='col pugilist-express'
-        onMouseEnter={showPxInfo}
-        onMouseLeave={hidePxInfo}
-            >
-            {/* The project is set at the background of the div */}
+        className={'col pugilist-express' } >
+            <img src={pugExpBg} height="100%" width='100%' />
+            <div className={'pugExpOverlay text-center'}>
+                <h2>Pugilist Express</h2>
+                <ul className={'text-center'}>
+                    <li><a>Live Site</a></li>
+                    <li><a>Github Repo</a></li>
+                </ul>
+            </div>
         </div>
     );
 
