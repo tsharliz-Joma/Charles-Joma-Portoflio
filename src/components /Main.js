@@ -207,8 +207,8 @@ const Main = () => {
                                     <div className='col about-me-square text-center'>
                                         <div className='boxing-icon text-center mt-1'><GiBoxingGloveSurprise className='mb-4' /></div>
                                         <h4 className='fw-7-ls-2'>At Work</h4>
-                                        <p> I am someone who is focused and tunnel vision to toward the task at hand, i am driven to complete
-                                            my tasks to the best of my ability and make sure to not leave any stone untured
+                                        <p> I am someone who is focused and has tunnel vision to toward the task at hand, i am driven to complete
+                                            any task to the best of my ability and make sure to not leave any stone untured.
                                         </p>
                                         
                                     </div>
@@ -216,7 +216,7 @@ const Main = () => {
                                         <div className='boxing-icon text-center mt-1'><ImSwitch className='mb-4' /></div>
                                         <h4 className='fw-7-ls-2'>Off Switch</h4>
                                         <p>In my free time i love to skate and box, boxing has been a big part of my life
-                                            and shaped me into who i am today. I Also love a good boogie where possible</p>
+                                            and shaped me into who i am today. I also love a good boogie where possible.</p>
                                     </div>
                                 </div>
                             </div>
