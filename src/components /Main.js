@@ -18,6 +18,8 @@ import VueIcon from '../images/vue-icon.png'
 import sohnBg from '../images/schoolofhardknocks.png'
 import bTrainBg from '../images/brain-train.png'
 import pugExpBg from '../images/pugilist-express.png'
+import TtBg from '../images/ticTactoe.png'
+import comingsoon from '../images/comingsoon.jpeg'
 
 import { BsFillPhoneVibrateFill } from 'react-icons/bs'
 import { AiTwotoneMail } from 'react-icons/ai'
@@ -32,82 +34,98 @@ import { ImSwitch } from 'react-icons/im'
 const Main = () => {
 
     const [ isHover, setIsHovering ] = useState(false);
-   
-    const showProjectInfo = () => {
-        setIsHovering(true)
-    }
+    const [ isHoverBt, setBtInfo ] = useState(false);
+    const [ isHoverPx, setPxinfo ] = useState(false);
+    const [ isHoverTt, setTtInfo ] = useState(false);
+    const [ isHoverPg, setPgInfo ] = useState(false);
 
-    useEffect(() => {
-        showProjectInfo()
-    }, [])
-    const hideSOHNInfo =  () => {
-        setIsHovering(false)
-    }
 
+     //==============================================================
+
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    }
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    }
 
     const [ schoolOfHardKnocks, showSOHN ] = useState(
-        <div
-        onMouseOver={showProjectInfo}
-         className={`col school-knocks `} > 
-            <img src={sohnBg} width="100%" height="100%" />
-            <div 
-            className={`sohnOverlay text-center ${isHover ? "" : "hidden"}`}>
-                <h2>School of hard knocks</h2>
-                <ul className={ 'text-center'} >
-                    <li>Live Site</li>
-                    <li>Github Repo</li>
-                </ul>
-            </div>
+        <div className={`col school-knocks`} > 
+                <img src={sohnBg} width="100%" height="100%" />
+                
         </div>
     );
 
     //==============================================================
 
-    const showBtInfo = (e) => {
-       
-    }
-    const hideBtInfo = (e) => {
-        
+    const hoverPgLang = () => {
+        setPgInfo(true);
     }
 
-    const [brainTrain, showBrainTrain] = useState(
-        <div 
-        className={'col brain-train'} >
-            <img src={bTrainBg} width="100%" height="100%" />
-            <div  className={'btOverlay text-center'}>
-                <h2>Brain Train</h2>
-                <ul className='text-center'>
-                    <li><a>Live Site</a></li>
-                    <li><a>Github Repo</a></li>
-                </ul>
-            </div>
+    const hidePgLang = () => {
+        setPgInfo(false);
+    }
+
+    const [ pgLang, showPgLang ] = useState(
+        <div className={`col pgLang`} >
+            <img src={comingsoon} width={"100%"} height={"100%"} />
+        </div>
+
+    )
+
+    //==============================================================
+
+    const showTt = () => {
+        setTtInfo(true)
+    };
+
+    const hideTt = () => {
+        setTtInfo(false)
+    }
+
+    const [ TicTacToe, showTicTacToe ] = useState(
+        <div className={'col ticTacToe'}>
+            <img src={TtBg} width={'100%'} height={'100%' } />
         </div>
     )
 
-    const showPxInfo = (e) => {
-        
+
+
+    //==============================================================
+
+    const showBtInfo = (e) => {
+       setBtInfo(true)
+    }
+    const hideBtInfo = (e) => {
+        setBtInfo(false)
     }
 
-    const hidePxInfo = (e) => {
-      
-    }
+    const [brainTrain, showBrainTrain] = useState(
+        <div className={'col brain-train'} >
+            <img src={bTrainBg} width="100%" height="100%" />    
+        </div>
+    )
+
+     //==============================================================
+
 
     const [pugilistExpress, showPugilistExpress ] = useState(
-        <div 
-        className={'col pugilist-express' } >
-            <img src={pugExpBg} height="100%" width='100%' />
-            <div className={'pugExpOverlay text-center'}>
-                <h2>Pugilist Express</h2>
-                <ul className={'text-center'}>
-                    <li><a>Live Site</a></li>
-                    <li><a>Github Repo</a></li>
-                </ul>
-            </div>
+        <div className='col pugilist-express'>
+            <img src={pugExpBg} width={'100%'} height={"100%"} />
         </div>
     );
 
-    const [show, showNav] = useState(false);
+    const showPxInfo = (e) => {
+        setPxinfo(true);
+    }
 
+    const hidePxInfo = (e) => {
+        setPxinfo(false);
+    }
+
+    //===============================================================
+
+    const [show, showNav] = useState(false);
 
     const showNavBar = () => {
         if(window.scrollY > 100){
@@ -182,9 +200,8 @@ const Main = () => {
                             <div className='row justify-content-start pb-3'>
                                 <div className='about-me-div text-center'>
                                     <h2 className='fw-7-ls-2'>About Me</h2>
-                                        A driven, motivated and positive individual, i love to question what is possible and find my
-                                        limitations. I am always motivated to learn what i dont know, take on every new challenge with a
-                                        positive mindset and love learnin from those around me.    
+                                        A driven, motivated and positive individual, i love to question limitations and strive to achieve more than expected. I am always motivated to learn what i dont know and grow my knowledge and I am also a character who takes on every new challenge with a
+                                        positive mindset and ambition. i take pride in my ability to uplift those around me.    
                                     </div>
                                 </div>
                                 <div className='row pt-1'>
@@ -209,24 +226,81 @@ const Main = () => {
                 </section>
                 
                 <section className='projects '>
-                <div className='projects-inner-container container h-100 mt-20'>
+                <div className='container h-100 mt-20'>
                     {/* I might want the container div to be set on the inner one */}
                     <div className='text-center proj-heading ' > Projects</div>
                         <div className='text-center mb-5' >While at General Assembly</div>
                         
                         <div className='row '>
-                            
-                            {pugilistExpress}
 
-                            {brainTrain}
-                            
-                            <div className='row g-0 '>
-                            
-                            { schoolOfHardKnocks }
+                            <div className={'col pugilist-express'} onMouseEnter={showPxInfo} onMouseLeave={hidePxInfo} >
+                                {pugilistExpress}
+                                { isHoverPx && 
+                                    <div className={'pugExpOverlay text-center'}>
+                                        <h2>Pugilist Express</h2>
+                                        <ul className={'text-center'}>
+                                            <li><a href='https://pugilist-express.web.app/' target={'_blank'}>Live Site</a></li>
+                                            <li><a href='https://github.com/tsharliz-Joma/Pugilist-Express' target={'_blank'}>Github Repo</a></li>
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
 
-                            { brainTrain }
-                                
-                            { schoolOfHardKnocks }
+                            <div className={'col brain-train'} onMouseEnter={showBtInfo} onMouseLeave={hideBtInfo} >
+                                { brainTrain }
+                                { isHoverBt && 
+                                    <div className={'btOverlay text-center'}>
+                                        <h2>Brain Train</h2>
+                                        <ul className='text-center'>
+                                            <li><a href='https://the-brain-train.web.app/' target={'_blank'}>Live Site</a></li>
+                                            <li><a href='https://github.com/Foyoman/brain-train' target={'_blank'}>Github Repo</a></li>
+                                        </ul>
+                                    </div>
+                                    }
+                            </div>    
+
+                            <div className='row g-0'>
+                            
+                            <div className={'col school-knocks' } onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+                                { schoolOfHardKnocks }
+                                { isHover &&
+                                    <div className={` sohnOverlay text-center `}>
+                                        <h2>School of hard knocks</h2>
+                                        <ul className={ 'text-center'} >
+                                            <li><a href="https://ancient-caverns-55419.herokuapp.com/" target={'_blank'}>Live Site</a></li>
+                                            <li><a href='https://github.com/tsharliz-Joma/FlexedUp' target={'_blank'}>Github Repo</a></li>
+                                        </ul>
+                                    </div> 
+                                }
+                            </div>
+                            <div className={'col pgLang'} onMouseEnter={hoverPgLang} onMouseLeave={hidePgLang} >
+                                { pgLang }
+                                { isHoverPg && 
+                                    <div className={' pgLangOverlay text-center '}>
+                                        <h2>PgLang Clone</h2>
+                                        <ul className='text-center'>
+                                            <li><a href="">Live Site</a></li>
+                                            <li><a href="">Github Repo</a></li>
+                                            <li><a href="https://www.pg-lang.com/">Original Site</a></li>
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
+
+                            
+
+                            <div className='col ticTacToe' onMouseEnter={showTt} onMouseLeave={hideTt} >
+                                {TicTacToe}
+                                { isHoverTt && 
+                                    <div className={'ticTacToeOverlay text-center'} >
+                                        <h2>Tic My Tac Your Toe</h2>
+                                        <ul className={'text-center'}>
+                                            <li><a href="https://tsharliz-joma.github.io/TicYourTacMyToe/" target={'_blank'}>Live Site</a></li>
+                                            <li><a href="https://github.com/tsharliz-Joma/TicYourTacMyToe">Github Repo</a></li>
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
 
                             </div>
                         </div>
