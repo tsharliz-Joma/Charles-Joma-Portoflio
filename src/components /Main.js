@@ -258,7 +258,7 @@ const Main = () => {
                                     }
                             </div>    
 
-                            <div className='row g-0'>
+                            <div className='row g-0 pt-3'>
                             
                             <div className={'col school-knocks' } onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                                 { schoolOfHardKnocks }
@@ -272,7 +272,8 @@ const Main = () => {
                                     </div> 
                                 }
                             </div>
-                            <div className={'col pgLang'} onMouseEnter={hoverPgLang} onMouseLeave={hidePgLang} >
+
+                            <div className={'col pgLang px-3'} onMouseEnter={hoverPgLang} onMouseLeave={hidePgLang} >
                                 { pgLang }
                                 { isHoverPg && 
                                     <div className={' pgLangOverlay text-center '}>
@@ -285,8 +286,6 @@ const Main = () => {
                                     </div>
                                 }
                             </div>
-
-                            
 
                             <div className='col ticTacToe' onMouseEnter={showTt} onMouseLeave={hideTt} >
                                 {TicTacToe}
