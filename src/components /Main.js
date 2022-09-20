@@ -155,8 +155,8 @@ const Main = () => {
                     <div className="navbar-nav text-end nav-anchor-div">
                         <a className="nav-item nav-link mx-5" href='#PageHome'>Home</a>
                         <a className="nav-item nav-link mx-5" href="#About">About</a>
-                        <a className="nav-item nav-link mx-5" href="#">Projects</a>
-                        <a className="nav-item nav-link mx-5" href="#">Contact</a>
+                        <a className="nav-item nav-link mx-5" href="#Projects">Projects</a>
+                        <a className="nav-item nav-link mx-5" href="#Contact">Contact</a>
                     </div></div>
                 </div>
             </nav>
@@ -166,15 +166,14 @@ const Main = () => {
                     <div className='container text-center'>
                         <div className='row bg-orange-transparent mx-auto p-5 header-div'>
                             <div className='col text-middle mt-5'>
-                                {/* <div className="f-2em">WELCOME!</div> */}
+                                
                                 <div className='intro'>
                                     <div className=''>
                                         <span className='intro-hello pt-5 pb-5'>HELLO!</span>
                                         <span className='intro-text'>I'm Charles Joma</span>
                                         <span className='d-block'>A Junior Software Engineer</span>
                                     </div>
-                                    {/* <span className='intro-text'>I am a Junior Software engineer, Sydney based, South Gippsland raised, and sudanese born!
-                                    A new General Assembly Sydney Alumni </span> */}
+                                    
                                 </div> 
                                 
                             </div>
@@ -227,8 +226,8 @@ const Main = () => {
                 
                 <section className='projects '>
                 <div className='container h-100 mt-20'>
-                    {/* I might want the container div to be set on the inner one */}
-                    <div className='text-center proj-heading ' > Projects</div>
+                    
+                    <div className='text-center proj-heading ' id='Projects' > Projects</div>
                         <div className='text-center mb-5' >While at General Assembly</div>
                         
                         <div className='row '>
@@ -355,7 +354,7 @@ const Main = () => {
             
 
             <footer className='footer text-center'>
-                <div className='f-2em-fw-500'>Contact Me</div>
+                <div className='f-2em-fw-500' id="Contact">Contact Me</div>
                 <div className='container' >
                     <div className='row'>
                         <div className='row mt-0'>
