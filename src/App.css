@@ -23,6 +23,7 @@ body {
 
 
 
+
 .intro .intro-text {
     font-weight: 600;
     font-size: 40px;
@@ -231,12 +232,27 @@ header {
     background-color: #e5e9ee;
 }
 
+.projects ul li {
+    margin: 10px;
+}
+
+.projects ul li a{
+    color: #002855;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: 24px;
+    cursor: grab;
+}
+
 .proj-heading {
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
+a:link {
+    text-decoration: none;
+}
 
 
 .ticTacToe, .pugilist-express, .brain-train, .school-knocks, .pgLang {
@@ -244,6 +260,10 @@ header {
     height: 300px;
     background-repeat: no-repeat;
     transition: .98s;
+}
+
+.brain-train img, .ticTacToe img, .pugilist-express img, .pgLang img, .school-knocks img{
+    border: 1px solid black;
 }
 
 .ticTacToeOverlay, .pugExpOverlay, .btOverlay, .sohnOverlay, .pgLangOverlay  {
@@ -269,6 +289,8 @@ header {
 
 /* ///////////////////////////////////////// */
 
+
+
 .tech-stack {
     height: 100%;
     /* background-color: whitesmoke; */
@@ -291,7 +313,24 @@ header {
 
 .icon {
     z-index: 1;
+    
 }
+
+/* ////////////////////////////////////////// */
+
+
+
+.cl-bl-fw500 {
+    color: rgb(126, 0, 252);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+
+.experience{
+    letter-spacing: 2px;
+}
+
 
 /* ///////////////////////////////////////// */
 
@@ -307,6 +346,14 @@ ul, ul li {
     transition: .9s;
     font-size: 1.1em;
     margin-top: 200px;
+}
+
+#footer-link{
+    color:rgb(255 158 27);
+}
+
+#Contact:hover {
+    color: #002855;
 }
 
 .footer:hover {

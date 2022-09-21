@@ -21,6 +21,10 @@ import pugExpBg from '../images/pugilist-express.png'
 import TtBg from '../images/ticTactoe.png'
 import comingsoon from '../images/comingsoon.jpeg'
 
+import Folks from '../images/Folks.png'
+import Meson from '../images/Meson.png'
+import BassCoast from '../images/BassCoast.png'
+
 import { BsFillPhoneVibrateFill } from 'react-icons/bs'
 import { AiTwotoneMail } from 'react-icons/ai'
 import { GiBoxingGloveSurprise } from 'react-icons/gi'
@@ -250,7 +254,7 @@ const Main = () => {
                                 { isHoverBt && 
                                     <div className={'btOverlay text-center'}>
                                         <h2>Brain Train</h2>
-                                        <ul className='text-center'>
+                                        <ul className={'text-center'}>
                                             <li><a href='https://the-brain-train.web.app/' target={'_blank'}>Live Site</a></li>
                                             <li><a href='https://github.com/Foyoman/brain-train' target={'_blank'}>Github Repo</a></li>
                                         </ul>
@@ -278,7 +282,7 @@ const Main = () => {
                                 { isHoverPg && 
                                     <div className={' pgLangOverlay text-center '}>
                                         <h2>PgLang Clone</h2>
-                                        <ul className='text-center'>
+                                        <ul className={'text-center'}>
                                             <li><a href="">Live Site</a></li>
                                             <li><a href="">Github Repo</a></li>
                                             <li><a href="https://www.pg-lang.com/">Original Site</a></li>
@@ -350,6 +354,52 @@ const Main = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='py-5 mt-5 experience'>
+                <div className='container text-center'>
+                    <h1 className='skills'>Experience</h1>
+                    <div className='row mt-4'>
+                        <div className='col job-img-container'>
+                            <strong>Barista</strong>
+                            <img src={Folks} height={'300px'} width={'100%'} />
+                            <span className='cl-bl-fw500'>April 2017 - Feburary 2022</span>
+                            <br></br>
+                            <strong>Head Barista</strong>
+                            <ul>
+                                <li> Coordinate coffee service</li>
+                                <li> Tracking and ordering of supplies</li>
+                                <li> Expresso Machine maintence and upkeep</li>
+                            </ul>
+                           
+                        </div>
+                        <div className='col'>
+                            <strong>Sales Consultant</strong>
+                            <img src={Meson} height={'300px'} width={'100%'} />
+                            <span className='cl-bl-fw500'>March 2022 - May 2022 </span>
+                            <br/>
+                            <strong>Consultant</strong>
+                            <ul>
+                                <li>Database cleaning</li>
+                                <li>Organisation appraisals & appointments </li>
+                            </ul>
+                            
+                        </div>
+                        <div className='col text-center'>
+                            <strong>Trainer</strong>
+                            <img src={BassCoast} height={'300px'} width={'100%'}  />
+                            <span className='cl-bl-fw500'>August 2017 - March 2022</span>
+                            <br />
+                            <strong>Boxing Coach</strong>
+                            <ul>
+                                <li>Train Competition Fighters</li>
+                                <li>Supervise Competition sparring</li>
+                                <li>Instruct Boxfit classes</li>
+                                <li>Upkeep of equipment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
 
             <footer className='footer text-center'>
@@ -358,13 +408,13 @@ const Main = () => {
                     <div className='row'>
                         <div className='row mt-0'>
                             <ul className='col '>
-                                <li className='contact-info'><a href="https://github.com/tsharliz-Joma" target={"_blank"}><VscGithub/></a></li>
+                                <li className='contact-info'><a href="https://github.com/tsharliz-Joma" target={"_blank"} id="footer-link"><VscGithub/></a></li>
                             </ul>
                             <ul className="col">
-                                <li className='contact-info'><a href='https://www.linkedin.com/in/charlesjoma/' target={'_blank'}><BsLinkedin /></a></li>
+                                <li className='contact-info'><a href='https://www.linkedin.com/in/charlesjoma/' target={'_blank'} id="footer-link"><BsLinkedin /></a></li>
                             </ul>
                             <ul className="col contact-info">
-                                <li ><BsFillPhoneVibrateFill color='rgb(255 158 27)' /><br /> +61 458 495 327 </li>
+                                <li ><BsFillPhoneVibrateFill color='rgb(255 158 27)' /><br /> 0458 495 327 </li>
                             </ul>
                             <ul className='contact-info col'>
                                 <li><AiTwotoneMail color='rgb(255 158 27)' /> charlesjoma@yahoo.com </li>
