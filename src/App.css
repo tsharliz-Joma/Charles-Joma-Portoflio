@@ -14,7 +14,7 @@ body {
 .nav {
     height: 90px;
     width: 100%;
-    font-size: 2.5em;
+    
 }
 
 .nav a {
@@ -26,12 +26,12 @@ body {
 
 .intro .intro-text {
     font-weight: 600;
-    font-size: 40px;
+    font-size: 24px;
     color: #002855;
 }
 
 .intro .intro-hello {
-    font-size: 24px;
+    font-size: 18px;
     display: block;
     text-align: left;
 }
@@ -40,7 +40,7 @@ body {
     margin-top: 5px;
     padding-top: 0;
     padding-bottom: 0;
-    height: 50px;
+    height: 30px;
     border-radius: 100px;
     background-color: #002855;
     transition: background-color 0.5s ease-in-out;
@@ -54,7 +54,7 @@ body {
 }
 
 .nav-anchor-div {
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .header-div {
@@ -79,8 +79,8 @@ body {
 header {
     display: block;
     width: 100%;
-    background: url('./images/town.webp');
-    background-size: 100%;
+    background: url('./images/secondTown.jpeg');
+    background-size:cover;
     height: 100vh!important;
     background-repeat: no-repeat;
     background-position: center;
@@ -168,7 +168,7 @@ header {
     background: linear-gradient(38.53deg, rgb(255 158 27) 0%, #f74f41ff 100%);
     border-radius: 5px;
     color:#002855;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1.5px;
 }
 
@@ -191,7 +191,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 100%;
+    width: 80%;
     height: 850px;
     border-radius: 5px;
 }
@@ -204,8 +204,9 @@ header {
 
 .bg-wh {
     background: #e5e9ee;
-    padding: 75px 50px;
+    padding: 50px 50px;
     border-radius: 5px;
+    width: 100%;
 }
 
 .about-me-square {
@@ -214,7 +215,7 @@ header {
     margin: 10px 10px;
     border-radius: 5px;
     color: #002855;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1.5px;
 }
 
@@ -245,8 +246,8 @@ header {
 }
 
 .proj-heading {
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 500;
     letter-spacing: 1px;
 }
 
@@ -340,12 +341,14 @@ ul, ul li {
 }
 
 .footer {
-    height: 135px;
+    height: 100%;
     background-color: #002855;
     color: whitesmoke;
     transition: .9s;
     font-size: 1.1em;
     margin-top: 200px;
+    bottom: 0;
+    width: 100%;
 }
 
 #footer-link{

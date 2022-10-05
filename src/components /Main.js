@@ -151,29 +151,29 @@ const Main = () => {
 
             <div className='center-container'>
 
-                <nav className={`nav navbar navbar-expand-lg fixed-top navbar-shrink`} id={`${show && 'Nav'}`}> 
+                <nav className={`nav navbar navbar-expand fixed-top navbar-shrink`} id={`${show && 'Nav'}`}> 
                 <div className='text-center w-100' ></div>
             
             <div className='collapse navbar-collapse '>  
                 <div className="collapse navbar-collapse" >
                     <div className="navbar-nav text-end nav-anchor-div">
-                        <a className="nav-item nav-link mx-5" href='#PageHome'>Home</a>
-                        <a className="nav-item nav-link mx-5" href="#About">About</a>
-                        <a className="nav-item nav-link mx-5" href="#Projects">Projects</a>
-                        <a className="nav-item nav-link mx-5" href="#Contact">Contact</a>
+                        <a className="nav-item nav-link mx-4" href='#PageHome'>Home</a>
+                        <a className="nav-item nav-link mx-4" href="#About">About</a>
+                        <a className="nav-item nav-link mx-4" href="#Projects">Projects</a>
+                        <a className="nav-item nav-link mx-4" href="#Contact">Contact</a>
                     </div></div>
                 </div>
             </nav>
 
             <header className='header' id="PageHome">
-                <div id="Home" className='d-flex h-100 align-items-center'>
+                <div id="Home" className='d-flex h-100 align-items-center col-lg-8 mx-auto'>
                     <div className='container text-center'>
-                        <div className='row bg-orange-transparent mx-auto p-5 header-div'>
-                            <div className='col text-middle mt-5'>
+                        <div className='row bg-orange-transparent mx-auto p-4 header-div'>
+                            <div className='col text-middle mt-4'>
                                 
                                 <div className='intro'>
                                     <div className=''>
-                                        <span className='intro-hello pt-5 pb-5'>HELLO!</span>
+                                        <span className='intro-hello pt-3 pb-3'>HELLO!</span>
                                         <span className='intro-text'>I'm Charles Joma</span>
                                         <span className='d-block'>A Junior Software Engineer</span>
                                     </div>
@@ -182,7 +182,7 @@ const Main = () => {
                                 
                             </div>
                             <div className='col'>
-                                <div className='mb-5'>
+                                <div className='mb-4'>
                                     <img className='headshot' src={ headshot } alt="headshot" />
                                 </div>
                             </div>
@@ -192,16 +192,17 @@ const Main = () => {
             </header>
 
             <section className='about-me bg-org col-wh'>
-                <div className='container'>
-                    <div className='row d-flex bg-wh'>
-                        <div className='col-md-6 col-lg-5 d-flex img-container'>
+
+                <div className='container col-lg-8 mx-auto'>
+                    <div className='row d-flex bg-wh mx-auto'>
+                        <div className='col-md-5 col-lg-6 d-flex img-container mx-auto'>
                             <div  className='img d-flex align-items-center'>    
                                 
                             </div>
                         </div>
-                        <div className='col-md-6 col-lg-7 pl-lg-5 py-5 ' id="About" >
+                        <div className='col-md-6 col-lg-6 pl-lg-5 py-5 ' id="About" >
                             <div className='row justify-content-start pb-3'>
-                                <div className='about-me-div text-center'>
+                                <div className='about-me-div col text-center'>
                                     <h2 className='fw-7-ls-2'>About Me</h2>
                                         A driven, motivated and positive individual, i love to question limitations and strive to achieve more than expected. I am always motivated to learn what i dont know and grow my knowledge and I am also a character who takes on every new challenge with a
                                         positive mindset and ambition. i take pride in my ability to uplift those around me.    
@@ -209,7 +210,7 @@ const Main = () => {
                                 </div>
                                 <div className='row pt-1'>
                                     <div className='col about-me-square text-center'>
-                                        <div className='boxing-icon text-center mt-1'><GiBoxingGloveSurprise className='mb-4' /></div>
+                                        <div className='boxing-icon text-center mt-2'><GiBoxingGloveSurprise className='mb' /></div>
                                         <h4 className='fw-7-ls-2'>At Work</h4>
                                         <p> I am someone who is focused and has tunnel vision to toward the task at hand, i am driven to complete
                                             any task to the best of my ability and make sure to not leave any stone untured.
@@ -217,7 +218,7 @@ const Main = () => {
                                         
                                     </div>
                                     <div className='col about-me-square text-center'>
-                                        <div className='boxing-icon text-center mt-1'><ImSwitch className='mb-4' /></div>
+                                        <div className='boxing-icon text-center mt-1'><ImSwitch className='mb' /></div>
                                         <h4 className='fw-7-ls-2'>Off Switch</h4>
                                         <p>In my free time i love to skate and box, boxing has been a big part of my life
                                             and shaped me into who i am today. I also love a good boogie where possible.</p>
@@ -229,14 +230,14 @@ const Main = () => {
                 </section>
                 
                 <section className='projects '>
-                <div className='container h-100 mt-20'>
+                <div className='container-sm  h-100 mt-20'>
                     
                     <div className='text-center proj-heading ' id='Projects' > Projects</div>
-                        <div className='text-center mb-5' >While at General Assembly</div>
+                        <div className='text-center mb-4' >While at General Assembly</div>
                         
                         <div className='row '>
-
-                            <div className={'col pugilist-express'} onMouseEnter={showPxInfo} onMouseLeave={hidePxInfo} >
+                        
+                            <div className={'col-md pugilist-express'} onMouseEnter={showPxInfo} onMouseLeave={hidePxInfo} >
                                 {pugilistExpress}
                                 { isHoverPx && 
                                     <div className={'pugExpOverlay text-center'}>
@@ -248,8 +249,8 @@ const Main = () => {
                                     </div>
                                 }
                             </div>
-
-                            <div className={'col brain-train'} onMouseEnter={showBtInfo} onMouseLeave={hideBtInfo} >
+                        
+                            <div className={'col-md brain-train mt-sm-3 my-md-0 mylg-0'} onMouseEnter={showBtInfo} onMouseLeave={hideBtInfo} >
                                 { brainTrain }
                                 { isHoverBt && 
                                     <div className={'btOverlay text-center'}>
@@ -260,11 +261,11 @@ const Main = () => {
                                         </ul>
                                     </div>
                                     }
-                            </div>    
-
-                            <div className='row g-0 pt-3'>
+                            </div>
                             
-                            <div className={'col school-knocks' } onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+                            <div className='row g-0 my-sm-3'>
+                            
+                            <div className={'col-md school-knocks' } onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                                 { schoolOfHardKnocks }
                                 { isHover &&
                                     <div className={` sohnOverlay text-center `}>
@@ -277,7 +278,7 @@ const Main = () => {
                                 }
                             </div>
 
-                            <div className={'col pgLang px-3'} onMouseEnter={hoverPgLang} onMouseLeave={hidePgLang} >
+                            <div className={'col-md pgLang px-3 my-sm-2 my-md-0 my-lg-0'} onMouseEnter={hoverPgLang} onMouseLeave={hidePgLang} >
                                 { pgLang }
                                 { isHoverPg && 
                                     <div className={' pgLangOverlay text-center '}>
@@ -291,7 +292,7 @@ const Main = () => {
                                 }
                             </div>
 
-                            <div className='col ticTacToe' onMouseEnter={showTt} onMouseLeave={hideTt} >
+                            <div className={'col-md ticTacToe '} onMouseEnter={showTt} onMouseLeave={hideTt} >
                                 {TicTacToe}
                                 { isHoverTt && 
                                     <div className={'ticTacToeOverlay text-center'} >
@@ -312,39 +313,39 @@ const Main = () => {
             <section className='tech-stack '>
                 <div className='container pt-4'>
                     <div className="row justify-content-around text-center ">
-                        <div className='tech-stack-container  '>
+                        <div className='tech-stack-container col '>
                             <h1 className='skills'> Skills </h1>
                             <span> skills.sort(( a,b ) => b - a ) </span>
                         </div>
                         <div className='row stack-icons m-5 container' >
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={jsLogo} alt="Javascript" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={bootstrapIcon} alt="Bootstrap" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={reactIcon} alt="React" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={jqueryIcon} alt="Jquery" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={aframeIcon} alt="Aframe" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={firebaseIcon} alt="Firebase" />
                             </div>
-                            <div className='col '>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={nodeIcon} alt="Jquery" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={rubyIcon} alt="Ruby" />
                             </div>
-                            <div className='col '>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={railsIcon} alt="Rails" />
                             </div>
-                            <div className='col'>
+                            <div className='col-sm col-lg col-xl'>
                                 <img src={VueIcon} alt="Vue" />
                             </div>
                             
@@ -356,10 +357,10 @@ const Main = () => {
             </section>
 
             <section className='py-5 mt-5 experience'>
-                <div className='container text-center'>
+                <div className='container-xl text-center'>
                     <h1 className='skills'>Experience</h1>
                     <div className='row mt-4'>
-                        <div className='col job-img-container'>
+                        <div className='col-md job-img-container'>
                             <strong>Barista</strong>
                             <img src={Folks} height={'300px'} width={'100%'} />
                             <span className='cl-bl-fw500'>April 2017 - Feburary 2022</span>
@@ -372,7 +373,7 @@ const Main = () => {
                             </ul>
                            
                         </div>
-                        <div className='col'>
+                        <div className='col-md'>
                             <strong>Sales Consultant</strong>
                             <img src={Meson} height={'300px'} width={'100%'} />
                             <span className='cl-bl-fw500'>March 2022 - May 2022 </span>
@@ -384,7 +385,7 @@ const Main = () => {
                             </ul>
                             
                         </div>
-                        <div className='col text-center'>
+                        <div className='col-md text-center'>
                             <strong>Trainer</strong>
                             <img src={BassCoast} height={'300px'} width={'100%'}  />
                             <span className='cl-bl-fw500'>August 2017 - March 2022</span>
@@ -404,26 +405,23 @@ const Main = () => {
 
             <footer className='footer text-center'>
                 <div className='f-2em-fw-500' id="Contact">Contact Me</div>
-                <div className='container' >
+                <div className='container-xl' >
                     <div className='row'>
                         <div className='row mt-0'>
-                            <ul className='col '>
+                            <ul className='col-sm'>
                                 <li className='contact-info'><a href="https://github.com/tsharliz-Joma" target={"_blank"} id="footer-link"><VscGithub/></a></li>
                             </ul>
-                            <ul className="col">
+                            <ul className="col-sm">
                                 <li className='contact-info'><a href='https://www.linkedin.com/in/charlesjoma/' target={'_blank'} id="footer-link"><BsLinkedin /></a></li>
                             </ul>
-                            <ul className="col contact-info">
-                                <li ><BsFillPhoneVibrateFill color='rgb(255 158 27)' /><br /> 0458 495 327 </li>
+                            <ul className="col-sm">
+                                <li className='contact-info'><BsFillPhoneVibrateFill color='rgb(255 158 27)' /><br /> 0458 495 327 </li>
                             </ul>
-                            <ul className='contact-info col'>
-                                <li><AiTwotoneMail color='rgb(255 158 27)' /> charlesjoma@yahoo.com </li>
+                            <ul className='col-sm'>
+                                <li className='contact-info'><AiTwotoneMail color='rgb(255 158 27)' /> charlesjoma@yahoo.com </li>
                             </ul>
                         </div>
-                        <div className='col mt-0'>
-                            
-                            
-                        </div>
+                        
                     </div>
 
                 </div>
