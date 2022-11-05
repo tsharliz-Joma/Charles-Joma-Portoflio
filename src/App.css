@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     
 }
 body {
@@ -14,37 +16,208 @@ body {
 .nav {
     height: 90px;
     width: 100%;
-    
-}
-
-.nav a {
-    color: white;
-}
-
-
-
-
-.intro .intro-text {
-    font-weight: 600;
-    font-size: 24px;
-    color: #002855;
-}
-
-.intro .intro-hello {
-    font-size: 18px;
-    display: block;
-    text-align: left;
+    color: black;
 }
 
 #Nav {
-    margin-top: 5px;
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 30px;
-    border-radius: 100px;
-    background-color: #002855;
+   
+    height: 60px;
+    border-radius: 5px;
+    background: #002855 !important;
+    color: aliceblue !important;
     transition: background-color 0.5s ease-in-out;
+    width: 95%;
+    margin: 10px auto;
 }
+#Nav a {
+    color: aliceblue;
+}
+
+.welcome-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+}
+
+.item {
+    background-color: #f9fafb;
+    box-shadow: 0px 5px 15px #00000026;
+    height: 200px;
+    width: 200px;
+    margin: 60px 30px;
+    transition: transform .5s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item:hover{
+    transform: scale(1.3);
+}
+
+.left-div {
+    display: inline-block;
+}
+
+.right-div {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+
+
+.hideInfo{
+    display: none;
+}
+
+
+
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    height: 900px;
+   
+
+}
+
+.about-me-content {
+    display: flex;
+    max-height: 100%;
+    max-width: 50%;
+    background-color: #f9fafb;
+    box-shadow: 0px 5px 15px #00000026;
+    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.25em;
+    color: black;
+    padding: 50px;
+    text-align: left;
+    border-radius: 5px;
+    line-height: 1.75em;
+    flex-shrink: 3;
+}
+
+.intro .intro-hello {
+    font-size: 20px;
+    display: block;
+    text-align: left;
+    color: black;
+    
+    letter-spacing: 1px;
+}
+
+
+
+
+
+@media only screen and (max-width: 740px){
+    .welcome-text {
+        display: none;
+    }
+    .hamburger {
+        display: initial;
+        margin: 25px 25px;
+    }
+    .hide-info{
+        display: none;
+    }
+    .hide {
+        display: none;
+    }
+    .hiddenOverlay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        transition: 0.4s;
+        font-size: 1.75em;
+        color: aliceblue;
+        text-align: center;
+        line-height: 2em;
+        font-family: 'Josefin Sans', sans-serif; 
+    }
+    .about-me-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 5;
+        height: 100%;
+    }
+    .about-me-content {
+        display: flex;
+        max-height: 100%;
+        min-width: 100%;
+        background-color: #f9fafb;
+        box-shadow: 0px 5px 15px #00000026;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: black;
+        padding: 50px;
+        text-align: left;
+        border-radius: 5px;
+        line-height: 1.75em;
+        padding: 10px 0;
+        margin: 10px 0;
+        
+    }
+    .right-div {
+       display: none;
+    }
+    .left-div {
+       margin: 0 auto;
+       
+    }
+
+    .intro .intro-hello {
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .hiddenOverlay ul li a {
+        color:#e5e9ee;
+        font-size: 40px;
+    }
+
+    .hiddenOverlay ul li {
+        margin: 25px 0 ;
+    }
+    
+}
+
+
+
+/* .nav a {
+    color: white;
+} */
+
+.intro .intro-text {
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #012144;
+}
+
 
 .headshot {
     
@@ -57,9 +230,9 @@ body {
     font-size: 16px;
 }
 
-.header-div {
-    width: 80%;
-    height: 100%;
+.new-bg {
+    background-color: transparent;
+    box-shadow: 0px 5px 15px #00000026;
     
 }
 
@@ -68,7 +241,7 @@ body {
 } 
 
 .main-body {
-    width: 100%;
+    min-width: 100%;
     
 }
 
@@ -99,8 +272,9 @@ header {
     padding: 20px 
 }
 
+/* MAYBE CHANGE THIS BACK */
 .bg-orange-transparent {
-    background: linear-gradient(38.53deg, rgba(255, 158, 27, .8) 0%, #f74f41ff 100%);
+    background: rgba(3, 68, 143, 0.8);
     border-radius: 5px;
 }
 
@@ -120,7 +294,11 @@ header {
 
 .skills {
     color: #002855;
-    font-weight: 650;
+    font-weight: 600;
+}
+
+.var-skills-2 {
+    color: #002855;
 }
 
 .f-2em-fw-500 {
@@ -144,37 +322,39 @@ header {
     color: black;
     height: 100%;
     /* margin: 100px 0 0 0; */
-    padding: 100px 0;
-    background: #f9fafb
+    padding: 200px 0;
+    /* background-color: #f9fafb; */
 }
 
 /* This has to come after the .about me or it doent work ? */
 .bg-org {
-    background: linear-gradient(38.53deg, rgb(255, 158, 27 ) 0%, #f74f41ff 100%);;
+    background: rgba(3, 68, 143, 0.9 );;
 }
 
 
 .boxing-icon {
-    border-radius: 50px;
+    border-radius: 5px;
     font-size: 3em;
-    width: 80px;
+    width: 100px;
     height: 80px;
     color: #e5e9ee;
-    background: #002855;
+    
 }
 
-.about-me-div {
+
+
+/* .about-me-div {
     transition: transform .9s;
     background: linear-gradient(38.53deg, rgb(255 158 27) 0%, #f74f41ff 100%);
-    border-radius: 5px;
+    border-radius: 3px;
     color:#002855;
     font-size: 16px;
     letter-spacing: 1.5px;
-}
+} */
 
 
 .fw-7-ls-2 {
-    font-weight: 700;
+    
     letter-spacing: 2px;
     font-size: 36px;
 }
@@ -186,44 +366,73 @@ header {
 }
 
 
-.img {
-    background-image: url('./images/IMG_1932.jpeg');
+/* .img {
+    background-image: url('./images/me.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 80%;
+    width: 100%;
     height: 850px;
     border-radius: 5px;
-}
+} */
 
 
-.img-container {
-    height: 50%;
-}
-
+/* .img-container {
+    height: 80%;
+} */
 
 .bg-wh {
     background: #e5e9ee;
     padding: 50px 50px;
-    border-radius: 5px;
     width: 100%;
+    border-radius: 6px;
 }
 
 .about-me-square {
-    transition: transform .9s; 
-    background: linear-gradient(38.53deg, rgb(255 158 27) 0%, #f74f41ff 100%);
-    margin: 10px 10px;
-    border-radius: 5px;
-    color: #002855;
+    
+    background: rgba(3, 68, 143, 0.8);
+    border-radius: 10px;
+    
     font-size: 16px;
     letter-spacing: 1.5px;
 }
 
-.about-me-square:hover {
+.about-me-square p {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+/* .about-me-square:hover {
     transform: scale(1.05);
     z-index: 1;
     color: #f9fafb;
+} */
+
+/* Edit this later */
+.glow {
+    /* background-color: #fff; */
+    border: 2px solid #012144;
+    box-shadow: 0px 0px 40px 20px #f9fafb;;
 }
+
+.glow2 {
+    /* border: 4px solid #e5e9ee; */
+    box-shadow: 0px 0px 40px 20px  #012144;;
+    border-radius: 5px;
+}
+
+.glow22 {
+    border: 1.5x solid #e5e9ee;
+    box-shadow: 0px 0px 40px 20px  #e5e9ee;;
+    border-radius: 5px;
+}
+
+.glow21 {
+   background-color: #002855;
+    box-shadow: 0px 0px 50px 10px  #012144;;
+    border-radius: 5px;
+}
+
 
 /* ///////////////////////////////////////// */
 
@@ -247,8 +456,9 @@ header {
 
 .proj-heading {
     font-size: 40px;
-    font-weight: 500;
     letter-spacing: 1px;
+    color: #002855;
+    font-weight: 650;
 }
 
 a:link {
@@ -256,25 +466,25 @@ a:link {
 }
 
 
-.ticTacToe, .pugilist-express, .brain-train, .school-knocks, .pgLang {
+.ticTacToe, .pugilist-express, .brain-train, .school-knocks, .pgLang, .wos {
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
     transition: .98s;
 }
 
-.brain-train img, .ticTacToe img, .pugilist-express img, .pgLang img, .school-knocks img{
+.brain-train img, .ticTacToe img, .pugilist-express img, .pgLang img, .school-knocks img, .wos img{
     border: 1px solid black;
 }
 
-.ticTacToeOverlay, .pugExpOverlay, .btOverlay, .sohnOverlay, .pgLangOverlay  {
+.ticTacToeOverlay, .pugExpOverlay, .btOverlay, .sohnOverlay, .pgLangOverlay, .wosOverlay  {
     position: relative;
     top: -100%;
     height: 100%;
     color: #e5e9ee;
     font-weight: 700;
     letter-spacing: 1px;
-    background-color: rgba(255, 158, 27, .98);
+    background-color: rgba(3, 68, 143, 0.8);
 }
 
 .school-knocks:hover, .brain-train:hover, .pugilist-express:hover, .ticTacToe:hover {
